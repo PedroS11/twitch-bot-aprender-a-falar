@@ -16,6 +16,7 @@ const authProvider = new RefreshingAuthProvider(
   },
   tokenData
 );
+
 const client: Client = new Client({
   options: { debug: true, messagesLogLevel: "info" },
   connection: {
