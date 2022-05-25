@@ -8,7 +8,8 @@
     "lint:fix": "eslint 'src/**/*.ts' --fix",
     "lint": "eslint 'src/**/*.ts' ",
     "prettier:fix": "prettier --write 'src/**/*.ts'",
-    "prettier": "prettier 'src/**/*.ts' --check"
+    "prettier": "prettier 'src/**/*.ts' --check",
+    "postinstall": "husky install"
   },
   "keywords": [],
   "author": "",
