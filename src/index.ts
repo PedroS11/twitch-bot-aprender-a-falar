@@ -17,7 +17,7 @@ const authProvider = new RefreshingAuthProvider(
   tokenData
 );
 const client: Client = new Client({
-  options: { debug: false, messagesLogLevel: "info" },
+  options: { debug: true, messagesLogLevel: "info" },
   connection: {
     secure: true,
     reconnect: true
@@ -25,6 +25,9 @@ const client: Client = new Client({
   authProvider: authProvider,
   channels: [getEnvironmentVariable("CHANNEL")]
 } as Options);
+
+// @ts-ignore
+client.log.setLevel("warn");
 
 client.connect().catch(console.error);
 
