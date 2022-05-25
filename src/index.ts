@@ -56,7 +56,6 @@ client.on("message", async (channel: string, userstate: Userstate, message: stri
         channel,
         `@${userstate.username}, se é passado, escreve-se '${matchedWord.replace("-", "")}' e não '${matchedWord}'!`
       );
-
       return;
     }
   } catch (e) {
